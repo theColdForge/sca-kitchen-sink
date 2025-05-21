@@ -19,18 +19,18 @@ function fetchDataAndEmit(socket) {
 
 // Set up a basic socket.io server
 io.on('connection', (socket) => {
-    console.log('a user connected');
+    
 
     // Listen for a 'message' event from the client
     socket.on('message', (msg) => {
-        console.log('message received:', msg);
+        
         fetchDataAndEmit(socket);
     });
 
     // Handle client disconnect
     socket.on('disconnect', () => {
-        console.log('user disconnected');
+        
     });
 });
 
-console.log('Socket.io server running on port 3000');
+
